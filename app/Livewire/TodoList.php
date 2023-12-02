@@ -41,6 +41,13 @@ class TodoList extends Component
 
     }
 
+    function deleteTask(Todo $todo)
+    {
+        $todo->delete();
+        $this->fetchTodos();
+
+    }
+
     public function render()
     {
         return view('livewire.todo-list');
