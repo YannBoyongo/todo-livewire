@@ -17,7 +17,7 @@ class TodoList extends Component
 
     function fetchTodos()
     {
-        $this->todos = Todo::all()->reverse();
+        $this->todos = Todo::all();
     }
 
     function addTodo()

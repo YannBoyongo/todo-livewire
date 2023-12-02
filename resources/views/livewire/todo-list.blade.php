@@ -1,13 +1,16 @@
 <div class="container">
+    <h1>To to list</h1>
     <div>
-        <input type="text" wire:model="task" wire:keydown.enter="addTodo" placeholder="add task">
-
+        <div class="todo-body">
+            <input type="text" wire:model="task" wire:keydown.enter="addTodo" placeholder="add task">
+        </div>
         @forelse ($todos as $key=>$todo)
             <div>
                 @if ($todo->status == 'open')
                     <input type="checkbox" id="markAsDone-{{ $todo->id }}"
                         wire:change="markAsDone({{ $todo->id }})">
                 @endif
+
                 <label for="markAsDone-{{ $todo->id }}"
                     style="{{ $todo->status == 'done' ? 'text-decoration: line-through' : '' }}">{{ $key + 1 }}.
                     {{ $todo->task }}</label>

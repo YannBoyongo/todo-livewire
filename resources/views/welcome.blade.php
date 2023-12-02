@@ -17,10 +17,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: midnightblue;
         }
 
         .container {
+            background-color: blanchedalmond;
+            width: 600px;
+            padding: 25px;
             text-align: center;
+            border-radius: 10px;
+        }
+
+        .todo-body {
+            display: flex;
+            align-items: center;
+            background-color: darkgray;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            padding: 10px
+        }
+
+        .todo-body input {
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 5px 0;
+            font-size: 20px;
+            width: 600px;
         }
     </style>
 </head>
